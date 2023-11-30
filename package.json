@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "cy:open": "npx cypress open",
+    "test:tablet": "cypress run --config viewportWidth=767,viewportHeight=480",
+    "cy:open:tablet": "cypress open --config viewportWidth=767,viewportHeight=480"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/e2e/step_definitions"
+  },
+  "dependencies": {
+    "mochawesome": "^7.1.3"
   }
-  
 }
