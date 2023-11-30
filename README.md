@@ -1,121 +1,103 @@
-# Como Rodar o Projeto na Sua Máquina 💻:
+# How to Run the Project on Your Machine 💻:
 
-### 1. Clonar o Repositório:
+### 1. Clone the Repository:
 ```bash
 git clone https://github.com/gaabrielLogan/cypress-cucumber.git
 ```
 
-### 2. Instalação das Dependências:
-Execute o seguinte comando para instalar as dependências, incluindo o Cypress:
+### 2. Install Dependencies:
+Execute the following command to install dependencies, including Cypress:
 ```bash
 npm install cypress
 ```
-Isso irá baixar o Node.js e as dependências necessárias para o Cypress.
+This will download Node.js and the necessary dependencies for Cypress.
 
+### 3. Project Overview:
 
+The project aims to perform tests on the "Seu Barriga" application using Cypress, a front-end testing tool. The testing approach follows the Behavior-Driven Development (BDD) methodology with Gherkin language, utilizing Cucumber.
 
-### 3. Explicando o Projeto:
+Gherkin is a behavior description language understandable by both developers and non-developers. It allows expressing test logic in an easy-to-understand format, promoting collaboration among different stakeholders.
 
-O projeto tem como objetivo realizar testes na aplicação "Seu Barriga" utilizando o Cypress, uma ferramenta de teste de front-end. A abordagem adotada para os testes segue a metodologia Behavior-Driven Development (BDD) com a linguagem Gherkin, utilizando o Cucumber.
+In this context, Cypress is used to automate and execute tests written in Gherkin. This provides an effective approach to validate the behavior of the "Seu Barriga" application in an automated and reproducible manner.
 
-O Gherkin é uma linguagem de descrição de comportamento compreensível tanto por desenvolvedores quanto por não desenvolvedores. Ele permite expressar a lógica do teste em um formato fácil de entender, promovendo a colaboração entre diferentes partes interessadas.
+## Environment Setup
 
-Dentro desse contexto, o Cypress é utilizado para automatizar e executar os testes escritos em Gherkin. Isso proporciona uma abordagem eficaz para validar o comportamento da aplicação "Seu Barriga" de maneira automatizada e reproduzível.
+This project uses Cypress for testing and includes an example file called `cypress.example.json` with fictional or missing configurations. This file serves as a reference for necessary configurations and does not contain confidential information.
 
-## Configurações do Ambiente
+Before running the project on your machine, create a file named `cypress.env.json` following the same format as `cypress.example.json` but with real and sensitive values filled in. This `cypress.env.json` file is required for the correct execution of the project and should contain specific environment information, such as API keys, passwords, emails, etc.
 
-Este projeto utiliza o Cypress para testes e possui um arquivo de exemplo chamado `cypress.example.json`, o qual contém configurações fictícias ou ausentes. Este arquivo é fornecido como uma referência para as configurações necessárias e não contém informações confidenciais.
+Make sure never to add or share the `cypress.env.json` file in the repository, keeping it out of version control to protect your credentials and sensitive information.
 
-Antes de rodar o projeto na sua máquina, crie um arquivo chamado `cypress.env.json` seguindo o mesmo formato do `cypress.example.json`, mas com valores reais e sensíveis preenchidos. Este arquivo `cypress.env.json` é necessário para a execução correta do projeto e deve conter as informações específicas do ambiente, como chaves de API, senhas, e-mails, etc.
-
-Certifique-se de nunca adicionar ou compartilhar o arquivo `cypress.env.json` no repositório, mantendo-o fora do controle de versão para proteger suas credenciais e informações sensíveis.
-
-## Estrutura de Diretórios
+## Directory Structure
 
 - **cypress/**
-  - Contém os arquivos de configuração e scripts de teste do Cypress.
-  
+  - Contains configuration files and Cypress test scripts.
+
 - **cypress/e2e/**
   - **step_definitions/**
-   - **login.feature**: Arquivo de especificação Gherkin para o teste de login.
-    - **register.feature**: Arquivo de especificação Gherkin para o teste de registro.
+    - **login.feature**: Gherkin specification file for login testing.
+    - **register.feature**: Gherkin specification file for registration testing.
     - **login/**
-      - **login.steps.js**: Arquivo contendo os passos do teste de login.
-      - **loginInvalid.steps.js**: Arquivo contendo os passos para cenários de login inválido.
+      - **login.steps.js**: File containing login test steps.
+      - **loginInvalid.steps.js**: File containing steps for invalid login scenarios.
     - **register/**
-      - **register.steps.js**: Arquivo contendo os passos do teste de registro.
-  
+      - **register.steps.js**: File containing registration test steps.
+
 - **cypress/support/**
-  - Pode incluir utilitários ou funções de suporte para os testes.
+  - May include utilities or support functions for tests.
 
 - **cypress/fixtures/**
-  - Contém dados de exemplo ou mocks para os testes.
-
+  - Contains example data or mocks for tests.
 
 - **node_modules/**
-  - Contém as dependências do projeto, geradas pelo Node.js.
+  - Contains project dependencies generated by Node.js.
 
-A sua documentação já está bastante completa! Se desejar, pode adicionar uma seção sobre como executar os testes, e também informações sobre comandos úteis para facilitar a execução do projeto. Aqui está um exemplo:
+Your documentation is already quite comprehensive! If you wish, you can add a section on how to run the tests and also information about useful commands to facilitate project execution. Here's an example:
 
+## Running Tests
 
-## Execução dos Testes
-
-Para executar os testes, utilize o seguinte comando na linha de comando:
-
-```bash
-npm test
-```
-
-Este comando iniciará a execução dos testes utilizando o Cypress. Certifique-se de que o ambiente está configurado corretamente, incluindo o preenchimento do arquivo `cypress.env.json` conforme as instruções anteriores.
-
-## Comandos Úteis
-
-**Abrir o Cypress para Execução Manual:**
-  ```bash
-  npx cypress open
-  ```
-  Isso abrirá a interface do Cypress, permitindo que você execute testes manualmente e visualize as interações.
-
-**Executar Testes com Relatório de Saída:**
-  ```bash
-  npx cypress run --reporter mochawesome
-  ```
-  Este comando executa os testes em modo headless (sem interface gráfica) e gera relatórios utilizando o Mochawesome.
-Claro, aqui está a adição dos comandos para tablets ao seu documento existente:
-
-```markdown
-## Execução dos Testes
-
-Para executar todos os testes, utilize o seguinte comando na linha de comando:
+To run all tests, use the following command in the command line:
 
 ```bash
 npm test
 ```
 
-Este comando iniciará a execução dos testes utilizando o Cypress. Certifique-se de que o ambiente está configurado corretamente, incluindo o preenchimento do arquivo `cypress.env.json` conforme as instruções anteriores.
+This command will initiate test execution using Cypress. Ensure that the environment is correctly set up, including filling in the `cypress.env.json` file as per the earlier instructions.
 
-Para executar testes específicos para tablets, você pode usar os seguintes comandos:
+To run tests specifically for tablets, you can use the following commands:
 
 ```bash
 npm run cy:open:tablet
 ```
 
-Isso abrirá a interface do Cypress, permitindo que você execute testes manualmente e visualize as interações no modo específico para tablets.
+This will open the Cypress interface, allowing you to manually execute tests and visualize interactions in tablet mode.
 
-E para executar testes de tablets no modo headless com relatório de saída, você pode usar:
+And to run tablet tests in headless mode with output reporting, you can use:
 
 ```bash
 npm run test:tablet
 ```
 
-Este comando executa os testes em modo headless (sem interface gráfica).
+This command runs tests in headless mode (without a graphical interface) and generates reports using Mochawesome.
 
-## Contatos
+## Useful Commands
 
-Se você tiver dúvidas, sugestões ou quiser contribuir para este projeto, fique à vontade para entrar em contato conosco. Estamos aqui para ajudar!
+**Open Cypress for Manual Execution:**
+  ```bash
+  npx cypress open
+  ```
+  This opens the Cypress interface, allowing you to execute tests manually and view interactions.
 
-- **Email:** [gabriellogancontato@gmail.com](mailto:seu-email@example.com)
+**Run Tests with Output Report:**
+  ```bash
+  npx cypress run --reporter mochawesome
+  ```
+  This command runs tests in headless mode and generates reports using Mochawesome.
+
+Feel free to reach out if you have questions, suggestions, or want to contribute to this project. We're here to help!
+
+- **Email:** [gabriellogancontact@gmail.com](mailto:your-email@example.com)
 - **LinkedIn:** [Gabriel Logan](https://www.linkedin.com/in/gabriel-logan-6079a2240/)
-- **Issues no GitHub:** [https://github.com/gaabrielLogan/cypress-cucumber/issues](https://github.com/gaabrielLogan/cypress-cucumber/issues)
+- **GitHub Issues:** [https://github.com/gaabrielLogan/cypress-cucumber/issues](https://github.com/gaabrielLogan/cypress-cucumber/issues)
 
-Esperamos que você aproveite trabalhar com este projeto tanto quanto nós! 😊
+We hope you enjoy working with this project as much as we do! 😊
