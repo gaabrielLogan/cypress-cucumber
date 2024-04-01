@@ -10,6 +10,8 @@ When("I fill in correct credentials and submit", () => {
     cy.get('button[type="submit"]').click()
 })
 
+//test
+
 Then("I should be redirected to the home page", () => {
     cy.url().should('be.equal', `${Cypress.config('baseUrl')}/logar`)
 })
