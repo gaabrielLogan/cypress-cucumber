@@ -100,4 +100,4 @@ Feel free to reach out if you have questions, suggestions, or want to contribute
 - **LinkedIn:** [Gabriel Logan](https://www.linkedin.com/in/gabriel-logan-6079a2240/)
 - **GitHub Issues:** [https://github.com/gaabrielLogan/cypress-cucumber/issues](https://github.com/gaabrielLogan/cypress-cucumber/issues)
 
-We hope you enjoy working with this project as much as we do! 😊
+We hope you enjoy working with this project as much as we do!! 😊
